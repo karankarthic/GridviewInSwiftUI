@@ -14,6 +14,11 @@
 		13E5C4D428570C050014C37A /* GridviewInSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C4D328570C050014C37A /* GridviewInSwiftUITests.swift */; };
 		13E5C4DE28570C050014C37A /* GridviewInSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C4DD28570C050014C37A /* GridviewInSwiftUIUITests.swift */; };
 		13E5C4E028570C050014C37A /* GridviewInSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C4DF28570C050014C37A /* GridviewInSwiftUIUITestsLaunchTests.swift */; };
+		13E5C4ED28573DE50014C37A /* Presentingview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C4EC28573DE50014C37A /* Presentingview.swift */; };
+		13E5C4F0285851FF0014C37A /* UiViewExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C4EE285851FF0014C37A /* UiViewExtentions.swift */; };
+		13E5C4F1285851FF0014C37A /* EMICalculaterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C4EF285851FF0014C37A /* EMICalculaterDataSource.swift */; };
+		13E5C4F32858537C0014C37A /* EmiCalcusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C4F22858537C0014C37A /* EmiCalcusView.swift */; };
+		13E5C5312860597F0014C37A /* EmiChartTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E5C5302860597F0014C37A /* EmiChartTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		13E5C4D928570C050014C37A /* GridviewInSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GridviewInSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E5C4DD28570C050014C37A /* GridviewInSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridviewInSwiftUIUITests.swift; sourceTree = "<group>"; };
 		13E5C4DF28570C050014C37A /* GridviewInSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridviewInSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13E5C4EC28573DE50014C37A /* Presentingview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentingview.swift; sourceTree = "<group>"; };
+		13E5C4EE285851FF0014C37A /* UiViewExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiViewExtentions.swift; sourceTree = "<group>"; };
+		13E5C4EF285851FF0014C37A /* EMICalculaterDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EMICalculaterDataSource.swift; sourceTree = "<group>"; };
+		13E5C4F22858537C0014C37A /* EmiCalcusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiCalcusView.swift; sourceTree = "<group>"; };
+		13E5C5302860597F0014C37A /* EmiChartTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmiChartTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +106,11 @@
 			children = (
 				13E5C4C228570C020014C37A /* GridviewInSwiftUIApp.swift */,
 				13E5C4C428570C020014C37A /* ContentView.swift */,
+				13E5C4F22858537C0014C37A /* EmiCalcusView.swift */,
+				13E5C5302860597F0014C37A /* EmiChartTable.swift */,
+				13E5C4EF285851FF0014C37A /* EMICalculaterDataSource.swift */,
+				13E5C4EE285851FF0014C37A /* UiViewExtentions.swift */,
+				13E5C4EC28573DE50014C37A /* Presentingview.swift */,
 				13E5C4C628570C040014C37A /* Assets.xcassets */,
 				13E5C4C828570C040014C37A /* Preview Content */,
 			);
@@ -257,8 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E5C4ED28573DE50014C37A /* Presentingview.swift in Sources */,
+				13E5C4F1285851FF0014C37A /* EMICalculaterDataSource.swift in Sources */,
 				13E5C4C528570C020014C37A /* ContentView.swift in Sources */,
+				13E5C4F32858537C0014C37A /* EmiCalcusView.swift in Sources */,
 				13E5C4C328570C020014C37A /* GridviewInSwiftUIApp.swift in Sources */,
+				13E5C4F0285851FF0014C37A /* UiViewExtentions.swift in Sources */,
+				13E5C5312860597F0014C37A /* EmiChartTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
