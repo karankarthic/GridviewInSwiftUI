@@ -20,6 +20,7 @@ struct EmiChartTable: View {
                             ForEach(item.returnArrayOFValues(), id: \.self) { value in
                                 Text("\(value)")
                                     .textFieldStyle(.roundedBorder)
+                                    .font(.system(size: 14, weight: .regular, design: .default))
                                     .lineLimit(1)
                                     .multilineTextAlignment(.leading)
                                     .padding()
@@ -33,6 +34,9 @@ struct EmiChartTable: View {
             }
             .navigationTitle("Emi chart")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarHidden(false)
+            .navigationBarColor(backgroundColor: .orange, titleColor: nil)
+            
         }
     }
 }

@@ -75,7 +75,7 @@ struct ValuesForEMICalcus {
         
         var principal = self.principal.rounded()
         
-        let tenureCout = Int(((tenure) * 12) + 1)
+        let tenureCout = Int(((tenure) * 12))
         for count in 0..<(tenureCout){
             
             let eachMontIntreset = getMonthlyIntrest(principal: principal).rounded()
