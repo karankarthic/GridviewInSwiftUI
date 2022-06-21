@@ -148,17 +148,8 @@ struct InPutView:View{
             .fixedSize()
             VStack{
                 ZStack{
-                    if value.isEmpty{
-                        Text("Enter the \(title)...")
-                            .font(.footnote)
-                            .foregroundColor(Color.primary.opacity(0.3))
-                            .multilineTextAlignment(.leading)
-                            .lineLimit(1)
-                            .offset(x: -15, y: 0)
-                            .frame(width: 150.0, height: 23.0)
-                        
-                    }
-                    TextField(value, text: $value)
+                    TextField("Enter the \(title)...", text: $value)
+                        .font(.system(size: 14, weight: .regular, design: .default))
                         .keyboardType(.decimalPad)
                 }
                 Divider()
