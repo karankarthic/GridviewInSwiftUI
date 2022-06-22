@@ -15,6 +15,7 @@ struct ContentView: View {
                 EmiCalcusView()
                     .padding()
                     .navigationTitle("EMI Calculator")
+                    .navigationBarColor(backgroundColor: .orange, titleColor: nil)
             }
         }
         

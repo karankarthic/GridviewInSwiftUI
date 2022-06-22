@@ -22,76 +22,75 @@ struct EmiCalcusView: View {
     
     var body: some View {
         
-            VStack{
-                InPutView(title: "Principal", value: $principalValue)
-                InPutView(title: "Interest", value: $intrestValue)
-                InPutView(title: "Tenture", value: $tentueValue)
-                Picker("", selection: $tenureChoice) {
-                    ForEach([0,1], id: \.self) {
-                        if $0 == 0{
-                            Text("years")
-                        }else{
-                            Text("Month")
-                        }
+        VStack{
+            InPutView(title: "Principal", value: $principalValue)
+            InPutView(title: "Interest", value: $intrestValue)
+            InPutView(title: "Tenture", value: $tentueValue)
+            Picker("", selection: $tenureChoice) {
+                ForEach([0,1], id: \.self) {
+                    if $0 == 0{
+                        Text("years")
+                    }else{
+                        Text("Month")
                     }
                 }
-                .frame(width: 200.0, height: 50)
-                .fixedSize()
-                .pickerStyle(.segmented)
-                ZStack{
-                    Capsule()
-                        .frame(width: 150.0, height: 38.0)
-                        .fixedSize()
-                        .foregroundColor(.orange)
-                    Button("Calculate"){
-                        calculate()
-                    }
-                    .foregroundColor(.primary)
-                    
+            }
+            .frame(width: 200.0, height: 50)
+            .fixedSize()
+            .pickerStyle(.segmented)
+            ZStack{
+                Capsule()
+                    .frame(width: 150.0, height: 38.0)
+                    .fixedSize()
+                    .foregroundColor(.orange)
+                Button("Calculate"){
+                    calculate()
+                }
+                .foregroundColor(.primary)
+                
+            }
+            
+            ZStack{
+                Capsule()
+                    .frame(width: 100.0, height: 38.0)
+                    .fixedSize()
+                    .foregroundColor(.red)
+                    .opacity(0.7)
+                Button("Reset"){
+                    reset()
+                }
+                .foregroundColor(.primary)
+                
+            }
+            
+            ZStack{
+                Rectangle()
+                    .frame(width: 300.0, height: 50)
+                    .foregroundColor(.orange)
+                    .cornerRadius(10)
+                Text(emiString)
+            }
+            
+            Button(action:{
+                if dataSource.emiPerMonth() != 0{
+                    isTableChartPresent.toggle()
+                        
                 }
                 
-                ZStack{
-                    Capsule()
-                        .frame(width: 100.0, height: 38.0)
-                        .fixedSize()
-                        .foregroundColor(.red)
-                        .opacity(0.7)
-                    Button("Reset"){
-                        reset()
-                    }
-                    .foregroundColor(.primary)
-                    
-                }
-                
-                ZStack{
-                    Rectangle()
-                        .frame(width: 300.0, height: 50)
-                        .foregroundColor(.orange)
-                        .cornerRadius(10)
-                    Text(emiString)
-                }
-                
-                ZStack{
-                    Capsule()
-                        .frame(width: 300.0, height: 38.0)
-                        .fixedSize()
-                        .foregroundColor(.orange)
-                        .opacity(0.6)
-                    Button("Emi Table"){
-                        if dataSource.emiPerMonth() != 0{
-                            isTableChartPresent.toggle()
-                        }
-                            
-                    }
+            }){
+                Text("Emi Table")
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .padding()
+                    .cornerRadius(40)
+                    .background(Capsule().foregroundColor(.orange).opacity(0.6))
                     .foregroundColor(.primary)
                     .sheet(isPresented: $isTableChartPresent) {
                         EmiChartTable(chartValue: dataSource.getEmiChartvalues())
                     }
-                }
-                
             }
-            .padding()
-      
+        }
+        .padding()
+        
     }
     
     private func calculate(){
